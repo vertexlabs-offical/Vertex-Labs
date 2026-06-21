@@ -2,6 +2,11 @@
   command = "pnpm --filter @workspace/vertex-labs run build:netlify"
   publish = "artifacts/vertex-labs/dist"
 
+[build.environment]
+  PORT = "3000"
+  BASE_PATH = "/"
+  NODE_ENV = "production"
+
 [functions]
   directory = "artifacts/vertex-labs/netlify/functions"
   node_bundler = "esbuild"
