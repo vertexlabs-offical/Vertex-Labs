@@ -7,6 +7,7 @@ import Home from "@/pages/home";
 import Projects from "@/pages/projects";
 import Pricing from "@/pages/pricing";
 import WhyWebsite from "@/pages/why-website";
+import Contact from "@/pages/contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -22,6 +23,7 @@ function Router() {
           <Route path="/projects" component={Projects} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/why-website" component={WhyWebsite} />
+          <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
       </main>

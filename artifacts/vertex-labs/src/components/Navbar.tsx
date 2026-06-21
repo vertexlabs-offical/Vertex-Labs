@@ -17,11 +17,12 @@ export default function Navbar() {
           <Link href="/projects" className="hover:text-primary transition-colors" data-testid="nav-projects">Projects</Link>
           <Link href="/pricing" className="hover:text-primary transition-colors" data-testid="nav-pricing">Pricing</Link>
           <Link href="/why-website" className="hover:text-primary transition-colors" data-testid="nav-why-website">Why a Website</Link>
+          <Link href="/contact" className="hover:text-primary transition-colors" data-testid="nav-contact">Contact</Link>
         </div>
 
         <div className="flex items-center gap-4">
           <Button asChild className="bg-primary hover:bg-accent text-primary-foreground shadow-[0_0_15px_rgba(139,60,247,0.3)] hover:shadow-[0_0_25px_rgba(139,60,247,0.5)] transition-all border-none">
-            <Link href="/pricing" data-testid="nav-cta">Get Quote</Link>
+            <Link href="/contact" data-testid="nav-cta">Get Quote</Link>
           </Button>
         </div>
       </div>
