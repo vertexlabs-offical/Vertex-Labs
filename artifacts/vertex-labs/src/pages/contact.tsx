@@ -26,6 +26,8 @@ const fadeUp = {
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     businessName: "",
@@ -38,14 +40,28 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Something went wrong");
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Ambient glow */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
       </div>
@@ -78,7 +94,6 @@ export default function Contact() {
         >
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-7" data-testid="contact-form">
-              {/* Name */}
               <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible" className="space-y-2">
                 <Label htmlFor="name" className="text-sm font-medium text-foreground/80 tracking-wide">
                   Your Name <span className="text-primary">*</span>
@@ -95,7 +110,6 @@ export default function Contact() {
                 />
               </motion.div>
 
-              {/* Business Name */}
               <motion.div custom={1} variants={fadeUp} initial="hidden" animate="visible" className="space-y-2">
                 <Label htmlFor="businessName" className="text-sm font-medium text-foreground/80 tracking-wide">
                   Business Name <span className="text-primary">*</span>
@@ -112,7 +126,6 @@ export default function Contact() {
                 />
               </motion.div>
 
-              {/* Email */}
               <motion.div custom={2} variants={fadeUp} initial="hidden" animate="visible" className="space-y-2">
                 <Label htmlFor="email" className="text-sm font-medium text-foreground/80 tracking-wide">
                   Email Address <span className="text-primary">*</span>
@@ -130,7 +143,6 @@ export default function Contact() {
                 />
               </motion.div>
 
-              {/* Description */}
               <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="space-y-2">
                 <Label htmlFor="description" className="text-sm font-medium text-foreground/80 tracking-wide">
                   Project Description <span className="text-primary">*</span>
@@ -148,7 +160,6 @@ export default function Contact() {
                 />
               </motion.div>
 
-              {/* Budget */}
               <motion.div custom={4} variants={fadeUp} initial="hidden" animate="visible" className="space-y-2">
                 <Label htmlFor="budget" className="text-sm font-medium text-foreground/80 tracking-wide">
                   Budget Range{" "}
@@ -172,15 +183,26 @@ export default function Contact() {
                 </Select>
               </motion.div>
 
-              {/* Submit */}
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-400"
+                  data-testid="error-message"
+                >
+                  {error}
+                </motion.div>
+              )}
+
               <motion.div custom={5} variants={fadeUp} initial="hidden" animate="visible" className="pt-2">
                 <Button
                   type="submit"
+                  disabled={loading}
                   data-testid="button-submit"
                   size="lg"
-                  className="w-full h-14 text-base font-semibold rounded-xl bg-primary hover:bg-accent text-white border-none shadow-[0_0_25px_rgba(139,60,247,0.35)] hover:shadow-[0_0_40px_rgba(139,60,247,0.55)] transition-all duration-300"
+                  className="w-full h-14 text-base font-semibold rounded-xl bg-primary hover:bg-accent text-white border-none shadow-[0_0_25px_rgba(139,60,247,0.35)] hover:shadow-[0_0_40px_rgba(139,60,247,0.55)] transition-all duration-300 disabled:opacity-60"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
                 <p className="text-center text-xs text-muted-foreground/50 mt-4">
                   We respond within 24 hours. No spam, ever.
@@ -208,7 +230,11 @@ export default function Contact() {
                 </p>
               </div>
               <button
-                onClick={() => { setSubmitted(false); setForm({ name: "", businessName: "", email: "", description: "", budget: "" }); }}
+                onClick={() => {
+                  setSubmitted(false);
+                  setError(null);
+                  setForm({ name: "", businessName: "", email: "", description: "", budget: "" });
+                }}
                 className="text-sm text-muted-foreground/60 hover:text-primary underline underline-offset-4 transition-colors"
                 data-testid="button-reset"
               >
@@ -218,7 +244,6 @@ export default function Contact() {
           )}
         </motion.div>
 
-        {/* Reassurance strip */}
         {!submitted && (
           <motion.div
             initial={{ opacity: 0 }}
