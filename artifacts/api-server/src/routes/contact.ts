@@ -1,25 +1,21 @@
 import { Router, type IRouter } from "express";
 import nodemailer from "nodemailer";
-import { z } from "zod/v4";
 
 const router: IRouter = Router();
 
-const ContactSchema = z.object({
-  name: z.string().min(1),
-  businessName: z.string().min(1),
-  email: z.string().email(),
-  description: z.string().min(1),
-  budget: z.string().optional(),
-});
-
 router.post("/contact", async (req, res) => {
-  const parsed = ContactSchema.safeParse(req.body);
-  if (!parsed.success) {
+  const { name, businessName, email, description, budget } = req.body ?? {};
+
+  if (!name || !businessName || !email || !description) {
     res.status(400).json({ error: "Invalid form data" });
     return;
   }
 
-  const { name, businessName, email, description, budget } = parsed.data;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    res.status(400).json({ error: "Invalid email address" });
+    return;
+  }
 
   const gmailUser = process.env.GMAIL_USER;
   const gmailPass = process.env.GMAIL_APP_PASSWORD;
