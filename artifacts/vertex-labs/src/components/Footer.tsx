@@ -26,9 +26,11 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-foreground mb-4">Contact</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>hello@vertexlabs.in</li>
-            <li>+91 98765 43210</li>
-            <li>Mumbai, India</li>
+            <li>
+              <a href="mailto:vertex.labs.offical@gmail.com" className="hover:text-primary transition-colors">
+                vertex.labs.offical@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
 
