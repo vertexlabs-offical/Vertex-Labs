@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Vertex Labs"
+version = "1.0.0"
+id = "artifacts/vertex-labs"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25055
+
+[services.development]
+run = "pnpm --filter @workspace/vertex-labs run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/vertex-labs", "run", "build" ]
+publicDir = "artifacts/vertex-labs/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25055"
+BASE_PATH = "/"
