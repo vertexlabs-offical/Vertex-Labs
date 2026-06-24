@@ -45,13 +45,17 @@ export default function Contact() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${import.meta.env.BASE_URL}api/contact`, {
+      const encode = (data: Record<string, string>) =>
+        Object.entries(data)
+          .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+          .join("&");
+
+      const res = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...form }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Something went wrong");
+      if (!res.ok) throw new Error("Something went wrong. Please try again.");
       setSubmitted(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to send. Please try again.");
