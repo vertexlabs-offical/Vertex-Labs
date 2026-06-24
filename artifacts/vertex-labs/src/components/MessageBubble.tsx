@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import type { ChatMessage } from "../hooks/useChatbot";
-import type { ServiceItem, ProjectItem, PricingItem } from "../utils/searchKnowledgeBase";
+import type { ServiceItem, ProjectItem, PricingItem, BenefitPoint, BenefitsData } from "../utils/searchKnowledgeBase";
 
 interface Props {
   message: ChatMessage;
@@ -103,6 +103,35 @@ function PricingCard({ pricing }: { pricing: PricingItem[] }) {
   );
 }
 
+function BenefitsCard({ benefits }: { benefits: BenefitsData }) {
+  const Section = ({ data }: { data: { title: string; emoji: string; points: BenefitPoint[] } }) => (
+    <div className="mt-3">
+      <div className="flex items-center gap-2 mb-2">
+        <span>{data.emoji}</span>
+        <span className="font-semibold text-white text-xs uppercase tracking-wider">{data.title}</span>
+      </div>
+      <div className="space-y-1.5">
+        {data.points.map((p) => (
+          <div key={p.title} className="flex items-start gap-2 rounded-lg bg-white/5 border border-white/8 px-2.5 py-2">
+            <span className="text-sm shrink-0 mt-0.5">{p.emoji}</span>
+            <div>
+              <p className="text-xs font-semibold text-white/90">{p.title}</p>
+              <p className="text-[11px] text-white/50 leading-relaxed">{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="mt-2 space-y-1">
+      <Section data={benefits.websiteBenefits} />
+      <Section data={benefits.vertexBenefits} />
+    </div>
+  );
+}
+
 function ContactCard() {
   return (
     <div className="mt-3 flex flex-col gap-2">
@@ -157,6 +186,7 @@ export default function MessageBubble({ message }: Props) {
           {result.type === "pricing" && result.pricing && (
             <PricingCard pricing={result.pricing} />
           )}
+          {result.type === "benefits" && result.benefits && <BenefitsCard benefits={result.benefits} />}
           {result.type === "contact" && <ContactCard />}
         </div>
 

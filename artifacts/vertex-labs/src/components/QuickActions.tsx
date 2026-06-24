@@ -1,11 +1,12 @@
 interface Props {
-  onAction: (action: "services" | "projects" | "pricing" | "contact") => void;
+  onAction: (action: "services" | "projects" | "pricing" | "contact" | "benefits") => void;
 }
 
-const ACTIONS: { label: string; emoji: string; key: "services" | "projects" | "pricing" | "contact" }[] = [
+const ACTIONS: { label: string; emoji: string; key: "services" | "projects" | "pricing" | "contact" | "benefits" }[] = [
   { label: "Services", emoji: "🚀", key: "services" },
   { label: "Projects", emoji: "📁", key: "projects" },
   { label: "Pricing", emoji: "💰", key: "pricing" },
+  { label: "Benefits", emoji: "💡", key: "benefits" },
   { label: "Contact", emoji: "📞", key: "contact" },
 ];
 

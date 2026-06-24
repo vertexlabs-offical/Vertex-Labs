@@ -60,12 +60,13 @@ export function useChatbot() {
   );
 
   const handleQuickAction = useCallback(
-    (action: "services" | "projects" | "pricing" | "contact") => {
+    (action: "services" | "projects" | "pricing" | "contact" | "benefits") => {
       const labels: Record<string, string> = {
         services: "Show me your services",
         projects: "Show your projects",
         pricing: "What are your prices?",
         contact: "How can I contact you?",
+        benefits: "What are the benefits?",
       };
       setMessages((prev) => [...prev, userMessage(labels[action])]);
       const result = getQuickAction(action);

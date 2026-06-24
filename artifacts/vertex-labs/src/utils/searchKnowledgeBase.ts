@@ -2,9 +2,21 @@ import faqData from "../data/faq.json";
 import servicesData from "../data/services.json";
 import projectsData from "../data/projects.json";
 import pricingData from "../data/pricing.json";
+import benefitsData from "../data/benefits.json";
 import { scoreMatch } from "./keywordMatcher";
 
-export type ResponseType = "text" | "services" | "projects" | "pricing" | "contact";
+export type ResponseType = "text" | "services" | "projects" | "pricing" | "contact" | "benefits";
+
+export interface BenefitPoint {
+  emoji: string;
+  title: string;
+  desc: string;
+}
+
+export interface BenefitsData {
+  websiteBenefits: { title: string; emoji: string; points: BenefitPoint[] };
+  vertexBenefits: { title: string; emoji: string; points: BenefitPoint[] };
+}
 
 export interface ServiceItem {
   id: string;
@@ -42,6 +54,7 @@ export interface SearchResult {
   services?: ServiceItem[];
   projects?: ProjectItem[];
   pricing?: PricingItem[];
+  benefits?: BenefitsData;
   score: number;
 }
 
@@ -182,7 +195,7 @@ function contactFallback(_query: string): SearchResult {
 }
 
 // Quick action shortcuts — always return full data sets
-export function getQuickAction(action: "services" | "projects" | "pricing" | "contact"): SearchResult {
+export function getQuickAction(action: "services" | "projects" | "pricing" | "contact" | "benefits"): SearchResult {
   switch (action) {
     case "services":
       return {
@@ -209,6 +222,13 @@ export function getQuickAction(action: "services" | "projects" | "pricing" | "co
       return {
         type: "contact",
         text: "We'd love to hear from you! Here's how to reach Vertex Labs:",
+        score: 10,
+      };
+    case "benefits":
+      return {
+        type: "benefits",
+        text: "Here's why a website matters — and why Vertex Labs is the right choice:",
+        benefits: benefitsData as BenefitsData,
         score: 10,
       };
   }

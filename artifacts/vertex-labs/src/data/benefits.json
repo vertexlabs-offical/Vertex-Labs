@@ -1,0 +1,30 @@
+{
+  "websiteBenefits": {
+    "title": "Why Your Business Needs a Website",
+    "emoji": "🌐",
+    "points": [
+      { "emoji": "📈", "title": "24/7 Online Presence", "desc": "Your business works around the clock — even when you sleep." },
+      { "emoji": "🎯", "title": "Reach More Customers", "desc": "Get discovered by people actively searching for your services online." },
+      { "emoji": "💼", "title": "Build Credibility", "desc": "93% of consumers check a business online before buying. Look professional." },
+      { "emoji": "💰", "title": "Increase Revenue", "desc": "Websites convert visitors into paying customers with calls-to-action." },
+      { "emoji": "📊", "title": "Track & Analyse", "desc": "Understand your audience with analytics — make smarter business decisions." },
+      { "emoji": "🏆", "title": "Beat Competitors", "desc": "If you're not online, your competitors are winning customers you could have." },
+      { "emoji": "🌍", "title": "Expand Your Reach", "desc": "Sell beyond your local area — reach customers across India and the world." },
+      { "emoji": "🤝", "title": "Build Trust", "desc": "Showcase testimonials, certifications, and your story to build lasting trust." }
+    ]
+  },
+  "vertexBenefits": {
+    "title": "Why Choose Vertex Labs",
+    "emoji": "✦",
+    "points": [
+      { "emoji": "⚡", "title": "Fast Delivery", "desc": "Starter sites in 3–5 days. No unnecessary delays, no excuses." },
+      { "emoji": "💎", "title": "Premium Quality", "desc": "Agency-grade design and code at a fraction of typical agency prices." },
+      { "emoji": "📱", "title": "Mobile-First", "desc": "Every website we build is fully optimised for mobile, tablet, and desktop." },
+      { "emoji": "🔍", "title": "SEO Ready", "desc": "Built with best practices so Google can find and rank your website." },
+      { "emoji": "🛡️", "title": "Modern Tech Stack", "desc": "React, Next.js, TypeScript — future-proof technology that scales with you." },
+      { "emoji": "🎨", "title": "Custom Design", "desc": "No templates. Every site is uniquely designed to match your brand." },
+      { "emoji": "💬", "title": "24hr Response", "desc": "We respond to every enquiry within 24 hours — always." },
+      { "emoji": "♾️", "title": "Free Consultation", "desc": "Get a free quote and project discussion with zero commitment." }
+    ]
+  }
+}

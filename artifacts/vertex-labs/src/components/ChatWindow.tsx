@@ -11,7 +11,7 @@ interface Props {
   input: string;
   onInputChange: (v: string) => void;
   onSend: (text: string) => void;
-  onQuickAction: (action: "services" | "projects" | "pricing" | "contact") => void;
+  onQuickAction: (action: "services" | "projects" | "pricing" | "contact" | "benefits") => void;
   onSuggestion: (text: string) => void;
   onClose: () => void;
 }
