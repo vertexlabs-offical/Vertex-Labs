@@ -1,0 +1,62 @@
+[
+  {
+    "id": "vertex-portfolio",
+    "name": "Vertex Portfolio",
+    "emoji": "🎨",
+    "keywords": ["portfolio", "showcase", "agency", "studio", "design", "creative", "personal"],
+    "description": "A premium agency portfolio with 3D animations and glassmorphism design built to impress.",
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js"],
+    "category": "portfolio",
+    "highlights": ["3D hero section", "Smooth scroll animations", "Dark theme", "Mobile optimised"]
+  },
+  {
+    "id": "saas-dashboard",
+    "name": "SaaS Analytics Dashboard",
+    "emoji": "📊",
+    "keywords": ["saas", "dashboard", "analytics", "data", "metrics", "charts", "admin", "panel"],
+    "description": "A comprehensive SaaS analytics platform with real-time data visualisation and user management.",
+    "technologies": ["React", "TypeScript", "Recharts", "Node.js", "PostgreSQL"],
+    "category": "saas",
+    "highlights": ["Real-time charts", "User management", "Export reports", "Dark/light mode"]
+  },
+  {
+    "id": "ecommerce-store",
+    "name": "E-commerce Store",
+    "emoji": "🛍️",
+    "keywords": ["ecommerce", "store", "shop", "products", "checkout", "payment", "buy", "sell"],
+    "description": "A full-featured e-commerce platform with product management, cart, and Stripe payments.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Supabase"],
+    "category": "ecommerce",
+    "highlights": ["Product catalog", "Cart system", "Stripe checkout", "Order tracking"]
+  },
+  {
+    "id": "ai-chatbot",
+    "name": "AI Customer Support Bot",
+    "emoji": "🤖",
+    "keywords": ["ai", "chatbot", "support", "automation", "customer service", "bot", "assistant"],
+    "description": "An intelligent customer support chatbot with FAQ automation and seamless human handoff.",
+    "technologies": ["React", "TypeScript", "LangChain", "FastAPI"],
+    "category": "ai",
+    "highlights": ["Natural language understanding", "FAQ automation", "Handoff to human", "Analytics"]
+  },
+  {
+    "id": "startup-landing",
+    "name": "Startup Landing Page",
+    "emoji": "🚀",
+    "keywords": ["startup", "landing", "launch", "product", "marketing", "conversion", "waitlist"],
+    "description": "A high-converting landing page for a SaaS startup with waitlist, pricing, and testimonials.",
+    "technologies": ["React", "Framer Motion", "Tailwind CSS", "TypeScript"],
+    "category": "landing",
+    "highlights": ["Waitlist form", "Pricing section", "Testimonials", "CTA optimisation"]
+  },
+  {
+    "id": "business-website",
+    "name": "Professional Business Site",
+    "emoji": "🏢",
+    "keywords": ["business", "corporate", "professional", "services", "company", "consulting", "firm"],
+    "description": "A multi-page business website for a consulting firm with service pages and lead generation.",
+    "technologies": ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    "category": "business",
+    "highlights": ["Service pages", "Team section", "Blog", "Contact forms"]
+  }
+]

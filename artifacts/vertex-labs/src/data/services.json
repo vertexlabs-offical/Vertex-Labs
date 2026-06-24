@@ -1,0 +1,74 @@
+[
+  {
+    "id": "website-development",
+    "name": "Website Development",
+    "emoji": "🌐",
+    "keywords": ["website", "web", "site", "development", "build", "create", "design", "develop"],
+    "description": "Custom websites built with modern technologies — React, Next.js, TypeScript. Responsive, fast, and SEO-optimised for maximum impact.",
+    "features": ["Custom design", "Mobile responsive", "SEO optimised", "Fast loading", "CMS integration"],
+    "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "id": "landing-pages",
+    "name": "Landing Pages",
+    "emoji": "🎯",
+    "keywords": ["landing", "page", "lead", "conversion", "campaign", "marketing", "single page"],
+    "description": "High-converting landing pages designed to capture leads and drive conversions for your marketing campaigns.",
+    "features": ["Conversion optimised", "A/B testing ready", "Analytics integration", "Fast load time"],
+    "technologies": ["React", "Framer Motion", "Tailwind CSS"]
+  },
+  {
+    "id": "business-websites",
+    "name": "Business Websites",
+    "emoji": "🏢",
+    "keywords": ["business", "corporate", "company", "professional", "enterprise", "firm"],
+    "description": "Professional multi-page business websites that establish credibility and help you win more clients.",
+    "features": ["Multi-page", "Contact forms", "Service showcase", "Team section", "Google Maps"],
+    "technologies": ["React", "Next.js", "TypeScript"]
+  },
+  {
+    "id": "portfolio-websites",
+    "name": "Portfolio Websites",
+    "emoji": "🎨",
+    "keywords": ["portfolio", "showcase", "work", "projects", "personal", "freelancer", "creative"],
+    "description": "Stunning portfolio websites that showcase your work and attract the right clients or employers.",
+    "features": ["Project gallery", "About section", "Contact form", "Blog (optional)", "Animations"],
+    "technologies": ["React", "Framer Motion", "Tailwind CSS"]
+  },
+  {
+    "id": "ai-solutions",
+    "name": "AI Solutions",
+    "emoji": "🤖",
+    "keywords": ["ai", "artificial intelligence", "machine learning", "ml", "chatbot", "automation", "smart", "intelligence"],
+    "description": "Custom AI-powered features — chatbots, recommendation engines, content generation, and intelligent automation for your business.",
+    "features": ["Custom chatbots", "AI integrations", "Automation workflows", "Data processing", "LLM integrations"],
+    "technologies": ["Python", "LangChain", "FastAPI", "React", "TypeScript"]
+  },
+  {
+    "id": "saas-products",
+    "name": "SaaS Products",
+    "emoji": "⚡",
+    "keywords": ["saas", "software as service", "subscription", "product", "app", "platform", "dashboard", "startup"],
+    "description": "End-to-end SaaS product development — from MVP to full-scale platform with auth, payments, and dashboards.",
+    "features": ["User authentication", "Payment integration", "Dashboard", "API development", "Scalable architecture"],
+    "technologies": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"]
+  },
+  {
+    "id": "custom-software",
+    "name": "Custom Software",
+    "emoji": "🔧",
+    "keywords": ["custom", "software", "solution", "enterprise", "tool", "system", "automate", "bespoke"],
+    "description": "Bespoke software solutions tailored to your exact business requirements and workflows.",
+    "features": ["Requirements analysis", "Custom architecture", "Integration APIs", "Testing & QA", "Documentation"],
+    "technologies": ["React", "Node.js", "Python", "PostgreSQL", "Docker"]
+  },
+  {
+    "id": "digital-products",
+    "name": "Digital Products",
+    "emoji": "📦",
+    "keywords": ["digital", "product", "ebook", "template", "tool", "download", "asset"],
+    "description": "Design and development of digital products — UI kits, templates, tools, and downloadable resources.",
+    "features": ["Product strategy", "UI/UX design", "Development", "Payment integration", "Delivery system"],
+    "technologies": ["React", "Figma", "TypeScript", "Stripe"]
+  }
+]

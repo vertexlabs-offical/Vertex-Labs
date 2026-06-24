@@ -1,0 +1,56 @@
+[
+  {
+    "id": "what-is-vertex-labs",
+    "keywords": ["what", "vertex labs", "about", "company", "who", "tell", "describe", "do"],
+    "question": "What is Vertex Labs?",
+    "answer": "Vertex Labs is a precision-grade web development studio that builds premium websites and digital products for businesses. We specialise in website development, AI solutions, SaaS products, and custom software — delivering high-quality digital experiences at competitive prices."
+  },
+  {
+    "id": "contact",
+    "keywords": ["contact", "email", "reach", "touch", "talk", "message", "hire", "connect"],
+    "question": "How can I contact Vertex Labs?",
+    "answer": "You can reach us at **vertex.labs.offical@gmail.com** or through our Contact page. We respond within 24 hours and offer a free consultation with no commitment."
+  },
+  {
+    "id": "location",
+    "keywords": ["location", "where", "based", "country", "india", "city", "office"],
+    "question": "Where is Vertex Labs located?",
+    "answer": "Vertex Labs serves clients across India and internationally. We work remotely and collaborate with clients anywhere in the world."
+  },
+  {
+    "id": "turnaround",
+    "keywords": ["time", "long", "duration", "days", "weeks", "turnaround", "delivery", "complete", "finish", "fast", "quick"],
+    "question": "How long does it take to build a website?",
+    "answer": "Project timelines vary by complexity:\n• Starter Website: 3–5 days\n• Business Website: 1–2 weeks\n• Premium Website: 2–4 weeks\n• Custom Solutions: 4–8 weeks\n\nWe'll give you an exact timeline during your free consultation."
+  },
+  {
+    "id": "technologies",
+    "keywords": ["tech", "technology", "stack", "framework", "tools", "use", "built", "react", "next", "languages"],
+    "question": "What technologies does Vertex Labs use?",
+    "answer": "We use modern, industry-standard technologies:\n\n**Frontend:** React, Next.js, TypeScript, Tailwind CSS, Framer Motion\n**Backend:** Node.js, Express, Python, FastAPI\n**Database:** PostgreSQL, MongoDB, Supabase\n**AI/ML:** LangChain, OpenAI integrations, TensorFlow\n**Deployment:** Vercel, Netlify, AWS, Docker"
+  },
+  {
+    "id": "revision",
+    "keywords": ["revision", "change", "edit", "modify", "update", "after", "delivery", "fix"],
+    "question": "Do you offer revisions after delivery?",
+    "answer": "Yes! All our packages include revision rounds:\n• Starter: 1 revision round\n• Business: 2 revision rounds\n• Premium: 3 revision rounds\n• Custom: Unlimited revisions during the project"
+  },
+  {
+    "id": "payment",
+    "keywords": ["payment", "pay", "invoice", "advance", "deposit", "upi", "bank", "transfer", "how to pay"],
+    "question": "What are your payment terms?",
+    "answer": "We accept UPI, bank transfer, and online payments.\n\nTypical terms:\n• 50% advance to start the project\n• 50% on delivery\n\nFor Custom Solutions, we discuss milestone-based payment schedules."
+  },
+  {
+    "id": "maintenance",
+    "keywords": ["maintenance", "support", "after", "launch", "update", "bug", "fix", "ongoing"],
+    "question": "Do you offer post-launch support?",
+    "answer": "Yes! We offer post-launch support for all projects. Custom Solutions include dedicated post-launch support. For other plans, we offer affordable monthly maintenance packages. Reach out at vertex.labs.offical@gmail.com for details."
+  },
+  {
+    "id": "free-consultation",
+    "keywords": ["consultation", "free", "discuss", "talk", "call", "meeting", "chat", "quote"],
+    "question": "Do you offer a free consultation?",
+    "answer": "Absolutely! We offer a free consultation with no commitment. Just fill out our contact form or email vertex.labs.offical@gmail.com and we'll get back to you within 24 hours with a custom quote."
+  }
+]

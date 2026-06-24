@@ -1,0 +1,78 @@
+[
+  {
+    "id": "starter",
+    "name": "Starter Website",
+    "price": "₹2,499+",
+    "priceValue": 2499,
+    "emoji": "🌱",
+    "keywords": ["starter", "basic", "simple", "small", "cheap", "affordable", "budget", "low", "minimum", "cheapest", "least expensive"],
+    "description": "Perfect for individuals, freelancers, and small businesses needing an online presence.",
+    "features": [
+      "Up to 3 pages",
+      "Responsive design",
+      "Contact form",
+      "Basic SEO setup",
+      "1 revision round",
+      "3–5 day delivery"
+    ],
+    "bestFor": "Personal portfolios, freelancers, small local businesses"
+  },
+  {
+    "id": "business",
+    "name": "Business Website",
+    "price": "₹7,999+",
+    "priceValue": 7999,
+    "emoji": "🏢",
+    "keywords": ["business", "professional", "company", "medium", "standard", "popular", "most popular"],
+    "description": "The most popular choice for growing businesses needing a complete professional website.",
+    "features": [
+      "Up to 8 pages",
+      "Premium UI/UX design",
+      "Contact forms + CRM integration",
+      "Advanced SEO",
+      "Google Analytics",
+      "2 revision rounds",
+      "1–2 week delivery"
+    ],
+    "bestFor": "Growing businesses, agencies, service companies"
+  },
+  {
+    "id": "premium",
+    "name": "Premium Website",
+    "price": "₹14,999+",
+    "priceValue": 14999,
+    "emoji": "💎",
+    "keywords": ["premium", "advanced", "complex", "large", "animations", "high end", "best", "top"],
+    "description": "A high-end website with advanced animations, custom features, and premium design.",
+    "features": [
+      "Unlimited pages",
+      "Custom animations (Framer Motion)",
+      "3D elements (Three.js)",
+      "CMS integration",
+      "E-commerce ready",
+      "3 revision rounds",
+      "2–4 week delivery"
+    ],
+    "bestFor": "Established brands, agencies, premium products"
+  },
+  {
+    "id": "custom",
+    "name": "Custom Solutions",
+    "price": "₹29,999+",
+    "priceValue": 29999,
+    "emoji": "🚀",
+    "keywords": ["custom", "saas", "enterprise", "software", "ai", "platform", "complex", "full stack", "app", "system"],
+    "description": "Full-stack custom software — SaaS platforms, AI integrations, and enterprise solutions.",
+    "features": [
+      "Full-stack development",
+      "AI/ML integration",
+      "Custom backend & API",
+      "Database design",
+      "Authentication & payments",
+      "Unlimited revisions",
+      "4–8 week delivery",
+      "Post-launch support"
+    ],
+    "bestFor": "SaaS startups, AI products, enterprise software"
+  }
+]

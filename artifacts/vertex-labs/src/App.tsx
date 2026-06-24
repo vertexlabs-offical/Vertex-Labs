@@ -10,6 +10,7 @@ import WhyWebsite from "@/pages/why-website";
 import Contact from "@/pages/contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ function Router() {
         </Switch>
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
