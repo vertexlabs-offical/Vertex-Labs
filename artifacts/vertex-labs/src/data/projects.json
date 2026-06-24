@@ -10,26 +10,6 @@
     "highlights": ["3D hero section", "Smooth scroll animations", "Dark theme", "Mobile optimised"]
   },
   {
-    "id": "saas-dashboard",
-    "name": "SaaS Analytics Dashboard",
-    "emoji": "📊",
-    "keywords": ["saas", "dashboard", "analytics", "data", "metrics", "charts", "admin", "panel"],
-    "description": "A comprehensive SaaS analytics platform with real-time data visualisation and user management.",
-    "technologies": ["React", "TypeScript", "Recharts", "Node.js", "PostgreSQL"],
-    "category": "saas",
-    "highlights": ["Real-time charts", "User management", "Export reports", "Dark/light mode"]
-  },
-  {
-    "id": "ecommerce-store",
-    "name": "E-commerce Store",
-    "emoji": "🛍️",
-    "keywords": ["ecommerce", "store", "shop", "products", "checkout", "payment", "buy", "sell"],
-    "description": "A full-featured e-commerce platform with product management, cart, and Stripe payments.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Supabase"],
-    "category": "ecommerce",
-    "highlights": ["Product catalog", "Cart system", "Stripe checkout", "Order tracking"]
-  },
-  {
     "id": "ai-chatbot",
     "name": "AI Customer Support Bot",
     "emoji": "🤖",
